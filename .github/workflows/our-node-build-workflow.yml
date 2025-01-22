@@ -1,0 +1,15 @@
+name: node.js ci workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  ci:
+    name: Deployment
+    uses: k-t-or2/GHA.workflows/.github/workflows/gha.workflows.build-node.yml@main
+
+  
